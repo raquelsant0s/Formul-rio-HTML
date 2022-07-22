@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <title> Formulário HTML</title>
+        <meta charset="utf-8"/>
+    </head>
+
+    <body>
+
+        <h2 align="center"> Formulário HTML </h2>
+
+        <table border="0" align="center" width="500">
+        <tr><td>
+
+
+        <fieldset> <!-- Contorno ou margem do formulário-->
+            <legend> Informe seus Dados </legend> <!-- Funciona apenas no formulário-->
+            <form action="enviar.php" method="post" name="Raquel" >
+
+                <table border="0" cellpadding="5">
+                <tr>
+                <td><label> Nome: </label> </td>
+                <td><input type="text" id="nome" name="nome" size="40" maxlength="40" placeholder="Digite seu nome" required/></td>
+                </tr>
+
+                <!-- -------------------------------------------------------- -->
+
+                <tr>
+                <td><label> E-mail: </label> <!-- Atributo para mostrar oque escrever --> </td>
+                <td><input type="email" id="mail" name="mail" size="40" placeholder="Digite seu E-mail corretamente" required/></td> <!-- Atributo para receber a Informação-->
+                </tr>
+
+                <!-- -------------------------------------------------------- -->
+
+                <tr>
+                <td><label> Telefone: </label></td> 
+                <td><input type="tel" id="telefone" name="telefone" size="40" placeholder="Digite seu Telefone (XX) XXXXX-XXXX" required/></td>
+                </tr>
+
+                <!-- -------------------------------------------------------- -->
+
+                <tr>
+                <td><label> Data de Nascimento: </label></td> 
+                <td><input type="date" id="mail" name="data_nasc" min="1950-01-01" max="2004-12-31" required/></td>
+                </tr>
+
+                <!-- -------------------------------------------------------- -->
+                <tr>
+
+                <td><label> Senha: </label></td>
+                <td><input type="password" id="senha" name="senha" size="40" placeholder="Digite sua senha" required/></td>
+                </tr>
+
+                <!-- -------------------------------------------------------- -->
+                <tr>
+
+                <td><label> Sexo: </label></td>
+                <td><input type="radio" id="sexo" name="sexo" value="M" required/>
+                <label> Masculino </label>
+                <br/>
+                <input type="radio" id="sexo" name="sexo" value="F" required/>
+                <label> Feminino </label>
+                <br/>
+                <input type="radio" id="sexo" name="sexo" value="Outro" required/>
+                <label> Outro </label>
+                <input type="text" id="outro" name="outro" disabled/></td>
+                </tr>
+
+                <!-- -------------------------------------------------------- -->
+                <tr>
+
+                <td><label> Estilos musicais preferidos: </label></td>
+                <td><label><input type="checkbox" id="rock" name="rock" value="rock"/> 
+                Rock </label>
+                <br/>
+                <label><input type="checkbox" id="samba" name="samba" value="samba"/> 
+                Samba </label>
+                <br/>
+                <label><input type="checkbox" id="pop" name="pop" value="pop"/> 
+                Pop </label>
+                <br/>
+                <label><input type="checkbox" id="sertanejo" name="sertanejo" value="sertanejo"/> 
+                Sertanejo </label>
+                <br/>
+                <label><input type="checkbox" id="mpb" name="mpb" value="mpb"/> 
+                MPB </label>
+                <br/>
+                <label><input type="checkbox" id="funk" name="funk" value="funk"/>
+                Funk </label></td>
+                </tr>
+
+                <!-- -------------------------------------------------------- -->
+
+                <tr>
+                <td><label> Estado: </label></td>
+                <td><select id="estado" name="estado" required>
+                    <option value="" selected="selected">--Selecione--</option>
+
+                    <optgroup label="Estrangeiro">
+                        <option value="EX">Estrangeiro</option>
+                    </optgroup>
+         <!-- -------------------------------------------------------- -->
+                    <optgroup label="Norte">
+                        <option value="AC">Acre</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="PA">Pará</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="TO">Tocantins</option>
+                    </optgroup>
+         <!-- -------------------------------------------------------- -->
+                    <optgroup label="Nordeste">
+                        <option value="AL">Alagoas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="PI">Piauí</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="SE">Sergipe</option>
+                    </optgroup>
+         <!-- -------------------------------------------------------- -->
+                    <optgroup label="Centro Oeste">
+                        <option value="GO">Goiás</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="DF">Distrito Federal</option>
+                    </optgroup>
+         <!-- -------------------------------------------------------- -->
+                    <optgroup label="Sudeste">
+                        <option value="ES">Espírito Santo</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP">São Paulo</option>
+                    </optgroup>
+         <!-- -------------------------------------------------------- -->
+                    <optgroup label="Sul">
+                        <option value="PR">Paraná</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="SC">Santa Catarina</option>
+                    </optgroup>
+                </select></td>
+                </tr>
+
+                <!-- -------------------------------------------------------- -->
+
+                <tr>
+                <td><label> Assunto: </label></td>
+                <td><textarea id="assunto" name="assunto" cols="40" rows="10" maxlength="240"
+                placeholder="Digite o assunto (Máximo 240 caracteres)" required></textarea></td>
+                </tr>
+
+                <!-- -------------------------------------------------------- -->
+
+                <tr>
+                <td><label> Anexar arquivo: </label></td>
+                <td><input type="file" id="anexar" name="anexar" required/></td>
+                </tr>
+
+                <!-- -------------------------------------------------------- -->
+
+                <tr>
+                <th colspan="2">
+                <input type="submit" id="enviar" name="enviar" value="ENVIAR"/>
+                <input type="reset" id="limpar" name="limpar" value="LIMPAR"/>
+                <br/> <br/>
+                <button type="submit" id="send" name="send">
+                    <img src="img/send.png" width="40" height="20" alt="send" />
+                </button></th>
+                </tr>
+                </table> 
+            </form>
+        </fieldset>
+        </td></tr>    
+        </table>
+
+        <!-- os botões utilizamos TH para centralizar e ficar em negrito em um unico campo. -->
+
+        <!-- Em sexo e estilos musicais, o td das respostas ficam juntos, pois tem varias opções. -->
+
+        <!-- Usando o table entre os FORM, vamos organizar os campos de escrita e resposta como uma tabela 2X2.
+            Abre uma TR acima do nome e fecha depois de imput que receber os dado. Em cada imput de titulo e aonde recebe respostas, coloca
+            uma td. COMEÇA EM NOME E TERMINA EM SENHA. -->
+        
+        <!-- button = botao de enviar com imagem -->
+
+        <!-- SEXO OUTRO disabled = vai apenas funcionar com CSS, pois para escrever, tem q marcar a opção -->
+
+        <!-- required para não enviar os dados em branco-->
+
+        <!-- para o action funcionar, vamos colocar uma variavel para conectar ao banco! Para impedir que o 
+        botao enviar funcione, vamos colocar uma #. em method em post, não mostra na pagina que esta sendo enviado os dados,
+        maneira oculta, trocando para get, via url, vai mostrar os dados -->
+        
+        <!-- type=reset Apaga os dados dos campos -->
+
+        <!-- type=submit Ação que conecta com o banco de dados e envia dos dados -->
+
+        <!-- type=file utilizado para anexar arquivo do pc ou celular do usuario. Normalmente sao ate 25MB
+        porem tem como modificar direto no servidor -->
+
+        <!-- Nao pode deixar separada a tag textarea. "><" tem q ficar unidas-->
+
+        <!-- <Optgroup> = agrupar opções para selecoes. Ex: Regioes do Brasil -->
+
+        <!-- checkbox = marcar varias opções -->
+
+        <!-- Em id, para que o type=radio funcione, os id e name tem que ser iguais. Assim
+        a cada vez que a bolinha form marcada, será apenas uma unica vez.-->
+
+        <!-- Value = utiizado para deixar um campo ja definido em SEXO -->
+
+        <!-- Type:radio = utilizado para ter bolinhas de marcação em sexo-->
+
+        <!--type="text" id="nome" name="nome" size="30" = São atributos obrigatorios dentro do INPUT-->
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
